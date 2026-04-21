@@ -86,7 +86,7 @@ class _SearchScreenState extends State<SearchScreen> {
                           width: 40,
                           height: 40,
                           decoration: BoxDecoration(
-                            color: cat.color.withOpacity(0.12),
+                            color: cat.color.withValues(alpha: 0.12),
                             shape: BoxShape.circle,
                           ),
                           child: Icon(cat.icon,
@@ -108,7 +108,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                   color: cat.color,
                                   fontSize: 11,
                                   fontWeight: FontWeight.w600)),
-                          backgroundColor: cat.color.withOpacity(0.1),
+                          backgroundColor: cat.color.withValues(alpha: 0.1),
                           side: BorderSide.none,
                           visualDensity: VisualDensity.compact,
                         ),
@@ -147,8 +147,8 @@ class _SearchScreenState extends State<SearchScreen> {
               avatar: Icon(cat.icon, size: 16, color: cat.color),
               label: Text(cat.label),
               onPressed: () => _onSearch(cat.label),
-              backgroundColor: cat.color.withOpacity(0.08),
-              side: BorderSide(color: cat.color.withOpacity(0.3)),
+              backgroundColor: cat.color.withValues(alpha: 0.08),
+              side: BorderSide(color: cat.color.withValues(alpha: 0.3)),
             );
           }).toList(),
         ),

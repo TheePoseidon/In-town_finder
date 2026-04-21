@@ -136,7 +136,7 @@ class _PlaceCard extends StatelessWidget {
                 width: 48,
                 height: 48,
                 decoration: BoxDecoration(
-                  color: category.color.withOpacity(0.12),
+                  color: category.color.withValues(alpha: 0.12),
                   shape: BoxShape.circle,
                 ),
                 child: Icon(category.icon, color: category.color, size: 24),

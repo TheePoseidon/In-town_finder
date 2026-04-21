@@ -64,7 +64,7 @@ class _MapScreenState extends State<MapScreen> {
                           border: Border.all(color: Colors.white, width: 2),
                           boxShadow: [
                             BoxShadow(
-                              color: cat.color.withOpacity(0.4),
+                              color: cat.color.withValues(alpha: 0.4),
                               blurRadius: 6,
                               offset: const Offset(0, 2),
                             ),
@@ -166,7 +166,7 @@ class _FilterChip extends StatelessWidget {
                 color: selected ? color : Colors.grey[300]!),
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withOpacity(0.1),
+                color: Colors.black.withValues(alpha: 0.1),
                 blurRadius: 4,
                 offset: const Offset(0, 2),
               ),
@@ -214,7 +214,7 @@ class _PlacePopup extends StatelessWidget {
                 width: 44,
                 height: 44,
                 decoration: BoxDecoration(
-                  color: cat.color.withOpacity(0.12),
+                  color: cat.color.withValues(alpha: 0.12),
                   shape: BoxShape.circle,
                 ),
                 child: Icon(cat.icon, color: cat.color, size: 22),

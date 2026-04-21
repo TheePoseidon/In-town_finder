@@ -56,7 +56,7 @@ class PlaceDetailScreen extends StatelessWidget {
                             color: cat.color,
                             fontSize: 12,
                             fontWeight: FontWeight.w600)),
-                    backgroundColor: cat.color.withOpacity(0.1),
+                    backgroundColor: cat.color.withValues(alpha: 0.1),
                     side: BorderSide.none,
                     padding: const EdgeInsets.symmetric(horizontal: 4),
                     visualDensity: VisualDensity.compact,

@@ -106,7 +106,7 @@ class HomeScreen extends StatelessWidget {
                   Text(
                     'Find hospitals, police, restaurants,\nparks and more across Kigali.',
                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                          color: Colors.white.withOpacity(0.9),
+                          color: Colors.white.withValues(alpha: 0.9),
                         ),
                   ),
                 ],
@@ -131,7 +131,7 @@ class _CategoryCard extends StatelessWidget {
       color: Colors.white,
       borderRadius: BorderRadius.circular(16),
       elevation: 2,
-      shadowColor: category.color.withOpacity(0.3),
+      shadowColor: category.color.withValues(alpha: 0.3),
       child: InkWell(
         onTap: onTap,
         borderRadius: BorderRadius.circular(16),
@@ -144,7 +144,7 @@ class _CategoryCard extends StatelessWidget {
                 width: 52,
                 height: 52,
                 decoration: BoxDecoration(
-                  color: category.color.withOpacity(0.12),
+                  color: category.color.withValues(alpha: 0.12),
                   shape: BoxShape.circle,
                 ),
                 child: Icon(category.icon, color: category.color, size: 26),
