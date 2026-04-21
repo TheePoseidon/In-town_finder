@@ -5,7 +5,7 @@ import '../data/kigali_places.dart';
 import '../models/category_info.dart';
 import '../models/place.dart';
 import 'place_detail_screen.dart';
-import 'home_screen.dart' show _BottomNav;
+import 'search_screen.dart';
 
 class MapScreen extends StatefulWidget {
   const MapScreen({super.key});
@@ -131,7 +131,7 @@ class _MapScreenState extends State<MapScreen> {
             ),
         ],
       ),
-      bottomNavigationBar: _BottomNav(currentIndex: 1),
+      bottomNavigationBar: _MapBottomNav(),
     );
   }
 }
@@ -256,6 +256,33 @@ class _PlacePopup extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+}
+
+class _MapBottomNav extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return BottomNavigationBar(
+      currentIndex: 1,
+      selectedItemColor: const Color(0xFF20A850),
+      unselectedItemColor: Colors.grey,
+      onTap: (i) {
+        if (i == 1) return;
+        if (i == 0) {
+          Navigator.of(context).popUntil((r) => r.isFirst);
+        } else if (i == 2) {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (_) => const SearchScreen()),
+          );
+        }
+      },
+      items: const [
+        BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+        BottomNavigationBarItem(icon: Icon(Icons.map), label: 'Map'),
+        BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
+      ],
     );
   }
 }
